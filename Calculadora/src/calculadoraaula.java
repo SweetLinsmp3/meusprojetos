@@ -20,23 +20,25 @@ public class calculadoraaula {
     static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        double x,y;
+        double x = 0,y = 0,a,b,c;
         int opcao;
         do{//antes dos numero
-            System.out.println("Calculadora\n------------------\nescolha uma opção\n1-Soma 2-Multiplicacao 3-Subtracao 4-Divisao 5-Sair\n");
+            System.out.println("Calculadora\n------------------\nescolha uma opção\n1-Soma 2-Multiplicacao 3-Subtracao 4-Divisao 5-Bhaskara 6-Sair\n");
             opcao = entrada.nextInt();
-            if (opcao == 5) {
+            if (opcao == 6) {
                 System.out.println("Ate mais!");
                 break;
             }
-            if (opcao < 1 || opcao > 4){
+            if (opcao < 1 || opcao > 5){
                 System.out.println("Invalido");
                 continue;
             }
-                System.out.println("Valor de x:");
-                x = entrada.nextDouble();
-                System.out.println("Valor de y");
-                y = entrada.nextDouble();
+                if (opcao != 5) {
+                    System.out.println("Valor de x: ");
+                    x = entrada.nextDouble();
+                    System.out.println("Valor de y: ");
+                    y = entrada.nextDouble();
+                }
             switch (opcao) {
                 case 1:
                     System.out.println("------------------\nResultado: "+soma(x,y)+"\nSomando: "+x+" + "+y+"\n------------------");
@@ -51,6 +53,16 @@ public class calculadoraaula {
                 case 4:
                     System.out.println("------------------\nResultado: "+divisao(x,y)+"\nDividindo: "+x+" / "+y+"\n------------------");
                     break;
+                case 5:
+                    System.out.println("Digite o valor de a:");
+                    a = entrada.nextDouble();
+                    System.out.println("Digite o valor de b:");
+                    b = entrada.nextDouble();
+                    System.out.println("Digite o valor de c:");
+                    c = entrada.nextDouble();
+                    bhaskara.calcularbhaskara(a,b,c);
+                    break;
+
             }
         }while(true);
     }
