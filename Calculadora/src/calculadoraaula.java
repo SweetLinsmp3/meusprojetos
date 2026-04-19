@@ -23,14 +23,14 @@ public class calculadoraaula {
         double x = 0,y = 0,a,b,c;
         int opcao;
         do{//antes dos numero
-            System.out.println("Calculadora\n------------------\nescolha uma opção\n1-Soma 2-Multiplicacao 3-Subtracao 4-Divisao 5-Bhaskara 6-Sair\n");
+            System.out.println("Calculadora\n------------------\nescolha uma opção\n------------------\n1-Soma\n2-Multiplicacao\n3-Subtracao \n4-Divisao\n5-Bhaskara\n6-Sair\n------------------");
             opcao = entrada.nextInt();
             if (opcao == 6) {
                 System.out.println("Ate mais!");
                 break;
             }
             if (opcao < 1 || opcao > 5){
-                System.out.println("Invalido");
+                System.out.println("Invalido\n------------------");
                 continue;
             }
                 if (opcao != 5) {
